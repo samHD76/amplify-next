@@ -19,8 +19,7 @@ const client = generateClient<Schema>();
  
     
 export const Startpage = () => {
-  const { signOut } = useAuthenticator();
-  const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
+    const { user, signOut } = useAuthenticator();  const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
 
   function listTodos() {
     client.models.Todo.observeQuery().subscribe({
@@ -44,6 +43,7 @@ export const Startpage = () => {
   return (
    
     <main>
+              <h1>{user?.signInDetails?.loginId}'s todos</h1>
       <h1>My todos</h1>
             <button onClick={signOut}>Sign out</button>
       <button onClick={createTodo}>+ new</button>
