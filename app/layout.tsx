@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./app.css";
+import MainLayout from "./components/MainLayout";
+import SideContextProvider from "./components/context/side-context";
+import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body >
+     
+        <SideContextProvider>
+      <MainLayout>{children}</MainLayout>
+     </SideContextProvider>
+   
+      </body>
     </html>
   );
 }
