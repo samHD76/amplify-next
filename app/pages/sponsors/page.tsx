@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 
-import { Spotlight } from '../ui/Spotlight'
+//import { Spotlight } from '../ui/Spotlight'
 
 const page = () => {
   return (
