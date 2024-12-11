@@ -82,7 +82,7 @@ const MainFooter = () => {
 </div>
 <p>Support us in our journey</p>
 <Link href={"../pages/signin"} className="mt-4 mb-4" >
-       <Button  className=" text-[#ecd6fb] bg-lime-500 p-1 hover:bg-gray-200 hover:text-[#33265e] min-w-32" variant="text">Support now</Button>
+       <button  className=" text-[#ecd6fb] bg-lime-500 p-1 hover:bg-gray-200 hover:text-[#33265e] min-w-32" >Support now</button>
        </Link>
 <p className="flex font-serif text-[#474545] text-xs mb-2"> assistant@myccangel.org </p>
 
