@@ -141,7 +141,7 @@ const page = () => {
       <div className='innerCard'>
         <img src={"/images/sss.png"} alt="Satya"/>
         <h4>Satya Prakash</h4>
-          <p>Co-founder</p>
+          <p>Co-Founder</p>
         </div>
 
         <div className='innerCard '>
@@ -153,22 +153,25 @@ const page = () => {
        
 
         <div className='innerCard'>
-        <img src={"/images/logo-1.png"} alt="Name"/>
-        <h4>Name</h4>
-          <p>fsdhjg fgsdg ygfsd gfsd gfhsd</p>
+        <img src={"/images/Baqer.png"} alt="Name"/>
+        <h4>Baqer Alshakhs</h4>
+          <p>Co-Founder & Head of Technology and Strategy</p>
         </div>
 
         <div className='innerCard'>
-        <img src={"/images/logo-1.png"} alt="Nisham"/>
+        <img src={"/images/Indu.png"} alt="Name"/>
+        <h4>Indu Barla</h4>
+          <p>Visual Designer</p>
+        </div>
+
+        <div className='innerCard '>
+        <img className='flex max-h-54 contain-layout' 
+                src={"/images/Nisham3.png"} alt="Nisham"/>
         <h4>Nisham Purwa</h4>
           <p>Front-End developer</p>
         </div>
 
-        <div className='innerCard'>
-        <img src={"/images/logo-1.png"} alt="Name"/>
-        <h4>Name</h4>
-          <p>fsdhjg fgsdg ygfsd gfsd gfhsd</p>
-        </div>
+      
 
       </div>
       </div>
