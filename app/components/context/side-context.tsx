@@ -15,7 +15,8 @@ userId: any;
 setUserId: React.Dispatch<React.SetStateAction<any>>;
 Signed: boolean;
 setSigned: React.Dispatch<React.SetStateAction<boolean>>;
-
+AuthFunction: any;
+setAuthFunction: React.Dispatch<React.SetStateAction<any>>;
 }
 
 export const SideContext= createContext<SideContext| null>(null);
@@ -25,6 +26,7 @@ export default function SideContextProvider({children}: {
   }){
     const [side, setSide]=useState(false);
     const [Signed, setSigned]=useState(false);
+    const [AuthFunction, setAuthFunction]=useState(false);
     const [profMenue, setProfMenue]=useState(false);
     const [userName, setUserName]=useState("");
     const [userId, setUserId]=useState("");
@@ -32,6 +34,8 @@ export default function SideContextProvider({children}: {
     return(
         <SideContext.Provider
         value={{
+            AuthFunction,
+            setAuthFunction,
             backButtonvisible,
             setBackButtonvisible,
             side,

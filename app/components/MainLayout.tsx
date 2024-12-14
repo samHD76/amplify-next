@@ -42,7 +42,7 @@ const MainLayout = ({children}:{
     const {Signed}=useSideContext();
     const {setSigned}=useSideContext();
     const {backButtonvisible}=useSideContext();
-
+    const {AuthFunction}=useSideContext();
     const {setBackButtonvisible}=useSideContext();
 
     const {side,setSide}=useSideContext();
@@ -91,7 +91,8 @@ const MainLayout = ({children}:{
 <>
 
 <React.StrictMode>
-<Authenticator   className='pt-44 bg-gradient-to-b  mx-auto from-transparent via-[#33265e] to-transparent'> 
+                                      {/*socialProviders={['amazon', 'apple', 'facebook', 'google']}*/}
+<Authenticator initialState={AuthFunction} hideSignUp={AuthFunction=="signUp"?false:true}  className='pt-44 bg-gradient-to-b  mx-auto from-transparent via-[#33265e] to-transparent'> 
 
 <div>
 <div  className={'absolute top-20 flex  flex-col w-full  '}>
@@ -216,7 +217,7 @@ const MainLayout = ({children}:{
  
  </div> 
 {backButtonvisible&&
-                               
+    <>                           
  <a href="/"  className="absolute top-0 mt-2 ml-2 md:ml-12 md:mt-3 " onClick={()=>{setBackButtonvisible(false)}}>
 <Image 
       
@@ -228,6 +229,10 @@ const MainLayout = ({children}:{
       // blurDataURL="data:..." automatically provided
       // placeholder="blur" // Optional blur-up while loading
     /></a>
+    {AuthFunction=="signUp"&&
+    
+    <div className='flex  flex-1 justify-center items-center text-["#33265e"] mr-20 ml-20 mt-5'><p>By Signing up you acknowledge that you have read and accept Myccangel <Link href='' className='text-green-600'>terms of use agreement</Link>  and consent to thae <a href='' className='text-green-600'>privacy policy </a> and video privacy policy.</p></div>}
+    </>
 }
     </div>
   

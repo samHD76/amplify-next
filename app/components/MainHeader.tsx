@@ -35,7 +35,7 @@ const MainHeader = () => {
   const {profMenue}=useSideContext();
   const {setProfMenue}=useSideContext();
   const {backButtonvisible}=useSideContext();
-
+const {AuthFunction,setAuthFunction}=useSideContext();
   const {setBackButtonvisible}=useSideContext();
   if (Signed) {const { user, signOut } = useAuthenticator();
 
@@ -70,7 +70,14 @@ const MainHeader = () => {
  //  console.log("side",side);
  signOut();
 }
-
+const sginingIn=()=>{
+setAuthFunction("signIn");
+setSigned(true)
+}
+const sginingUp=()=>{
+  setAuthFunction("signUp");
+  setSigned(true)
+  }
 //typescript  const { toggle } = useContext(MenuContext);
   const [index, setIndex] = useState(0);
   
@@ -104,12 +111,12 @@ let words="Early Diagnosis";
         {userName==""? <div className="flex text-xs  justify-end items-end  gap-1 md:mr-10 ">
 
     <div className="bg-[#e7c0ff] rounded-md px-1  md:mr-2 md:px-2 md:py-1 md:font-semibold">
-    <button onClick={()=>{setBackButtonvisible(true);setSigned(true) }}>Sign in</button>
+    <button onClick={()=>{setBackButtonvisible(true);sginingIn()}}>Sign in</button>
 
 </div>
          <div className="bg-[#e7c0ff] px-1 md:px-2  md:mr-2 md:py-1 rounded-md md:font-semibold">
 
-         <button onClick={()=>{setSigned(true)}}>Sign up</button>
+         <button onClick={()=>{setBackButtonvisible(true);sginingUp()}}>Sign up</button>
 
          </div>              
          </div> 
@@ -182,7 +189,7 @@ let words="Early Diagnosis";
         <button className=" px-3  py-20 backdrop-blur-sm border bg-orange-900/60 border-orange-500/20 text-white mx-auto text-center rounded-full relative ">
        
           <div className="absolute inset-y-5   left-px w-6 bg-gradient-to-b mx-auto from-transparent via-orange-400 to-transparent" />
-          <div className='absolute -right-7  pl-4   transform -rotate-90 text-white '>Sponsors</div> 
+          <div className='absolute -right-7  pl-4   transform -rotate-90 text-white '>Sponsor us</div> 
         </button>
         </Link>
       
