@@ -147,7 +147,7 @@ const page = () => {
         <div className='innerCard '>
           <img src={"/images/zoherweb1.png"} alt="Zoher"/>
           <h4>Zoher Abbas</h4>
-          <p>Senior Full-Stack developer</p>
+          <p>Senior Full-Stack Developer</p>
         </div>
 
        
@@ -168,7 +168,7 @@ const page = () => {
         <img className='flex max-h-54 contain-layout' 
                 src={"/images/Nisham3.png"} alt="Nisham"/>
         <h4>Nisham Purwa</h4>
-          <p>Front-End developer</p>
+          <p>Front-End Developer</p>
         </div>
 
       
