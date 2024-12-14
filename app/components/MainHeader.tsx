@@ -188,8 +188,8 @@ let words="Early Diagnosis";
  <Link href={"../pages/sponsors"}>
         <button className=" px-3  py-20 backdrop-blur-sm border bg-orange-900/60 border-orange-500/20 text-white mx-auto text-center rounded-full relative ">
        
-          <div className="absolute inset-y-5   left-px w-6 bg-gradient-to-b mx-auto from-transparent via-orange-400 to-transparent" />
-          <div className='absolute -right-7  pl-4   transform -rotate-90 text-white '>Sponsor us</div> 
+          <div className="absolute inset-y-5   left-px w-8 bg-gradient-to-b mx-auto from-transparent via-orange-400 to-transparent" />
+          <div className='absolute -right-6     transform -rotate-90 text-white '>Sponsor us</div> 
         </button>
         </Link>
       
