@@ -1,10 +1,8 @@
 import React from 'react'
-//import { Authenticator } from '@aws-amplify/ui-react';
 
 const page = () => {
   return (
-   
-<p>Profile</p>
+    <div>Dietitian</div>
   )
 }
 

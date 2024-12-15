@@ -19,7 +19,7 @@ import { MdOutlineArticle } from "react-icons/md";
 import { GoOrganization } from "react-icons/go";
 import MyNavbar from "./MyNavbar"
 import Image from "next/image";
-//import { Spotlight } from "../pages/ui/Spotlight";
+//import { Spotlight } from "../ui/Spotlight";
 import { IoMdClose } from "react-icons/io";
 import { DefaultValue } from 'aws-cdk-lib/aws-cloudwatch';
 import {useSideContext} from "./context/side-context";
@@ -89,7 +89,6 @@ const MainLayout = ({children}:{
 
 {Signed? 
 <>
-<Authenticator.Provider>
 <React.StrictMode>
                                       {/*socialProviders={['amazon', 'apple', 'facebook', 'google']}*/}
 <Authenticator initialState={AuthFunction} hideSignUp={AuthFunction=="signUp"?false:true}  className='pt-44 bg-gradient-to-b  mx-auto from-transparent via-[#33265e] to-transparent'> 
@@ -111,7 +110,6 @@ const MainLayout = ({children}:{
 </div>
 </Authenticator>
 </React.StrictMode>
-</Authenticator.Provider>
   
     </>
 :
@@ -151,10 +149,10 @@ const MainLayout = ({children}:{
 
         <li className='flex justify-start items-center  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e] rounded-xl p-2'>
 <BsInfoSquare className='mr-2 [#ecd6fb]'/>
-<Link href="../pages/aboutibd"  onClick={closeMenue}>⁠About IBD</Link>
+<Link href="../aboutibd"  onClick={closeMenue}>⁠About IBD</Link>
         </li> <li className='flex justify-start items-center  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e] rounded-xl p-2'>
 <MdOutlineContactSupport className='mr-2 [#ecd6fb]'/>
-<Link href="../pages/aihelp" onClick={closeMenue}>⁠AI Help</Link>
+<Link href="../aihelp" onClick={closeMenue}>⁠AI Help</Link>
         </li>   
     
         <li className='flex flex-col justify-start items-start rounded-xl p-2'>
@@ -169,27 +167,27 @@ const MainLayout = ({children}:{
 <ul className='flex flex-col justify-start items-start ml-4 mt-4 '>
     <li className='flex justify-center items-center  text-[#ecd6fb] gap-4 hover:bg-[#ecd6fb] hover:text-[#33265e] rounded-xl p-2 '>
 <FaUserDoctor className='mr-2  [#ecd6fb]'/>
-<Link href={"../pages/doctors"} onClick={closeMenue}>Doctors</Link>
+<Link href={"../doctors"} onClick={closeMenue}>Doctors</Link>
     </li>
     <li className='flex justify-center items-center gap-4  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e] rounded-xl p-2'>
 <LuApple className='mr-2  [#ecd6fb]'/>
-<Link href={"../pages/dietitian"} onClick={closeMenue}>⁠Dietitian</Link>
+<Link href={"../dietitian"} onClick={closeMenue}>⁠Dietitian</Link>
     </li>
     <li className='flex justify-center items-center gap-4 text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e] rounded-xl p-2'>
 <IoNavigateCircleOutline className='mr-2  [#ecd6fb]'/>
-<Link href={"../pages/toiletnavigator"} onClick={closeMenue}>⁠Toilet Navigator</Link>
+<Link href={"../toiletnavigator"} onClick={closeMenue}>⁠Toilet Navigator</Link>
     </li>
     <li className='flex justify-center items-center gap-4  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e] rounded-xl p-2'>
 <MdOutlineManageAccounts className='mr-2  [#ecd6fb]'/>
-<Link href={"../pages/manageibd"} onClick={closeMenue}>⁠Manage IBD</Link>
+<Link href={"../manageibd"} onClick={closeMenue}>⁠Manage IBD</Link>
     </li>
     <li className='flex justify-center items-center gap-4  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e] blue-800 rounded-xl p-2'>
 <MdOutlineArticle className='mr-2  [#ecd6fb]'/>
-<Link href={"../pages/articles"} onClick={closeMenue}>⁠Articles</Link>
+<Link href={"../articles"} onClick={closeMenue}>⁠Articles</Link>
     </li>
     <li className='flex justify-center items-center gap-4  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e] rounded-xl p-2'>
 <GoOrganization className='mr-2  [#ecd6fb]'/>
-<Link href={"../pages/organizations"} onClick={closeMenue}>⁠Organizations</Link>
+<Link href={"../organizations"} onClick={closeMenue}>⁠Organizations</Link>
     </li>
 </ul>
 }
@@ -199,11 +197,11 @@ const MainLayout = ({children}:{
 
         <li className='flex justify-start items-center  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e] rounded-xl p-2'>
 <SiHelpscout className='mr-2  [#ecd6fb]'/>
-<Link href="../pages/aboutus" onClick={closeMenue}>About us</Link>
+<Link href="../aboutus" onClick={closeMenue}>About us</Link>
         </li>
         <li className='flex justify-start items-center  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e] rounded-xl p-2'>
 <FiPhoneCall className='mr-2  [#ecd6fb]'/>
-<Link href="../pages/contact-us" onClick={closeMenue}>Contact us</Link>
+<Link href="../contact-us" onClick={closeMenue}>Contact us</Link>
         </li>
 
     </ul>

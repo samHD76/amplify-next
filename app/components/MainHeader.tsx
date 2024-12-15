@@ -56,8 +56,8 @@ const {AuthFunction,setAuthFunction}=useSideContext();
  const gotoProfile=()=> {
   // toggle();
   setProfMenue((prev)=> !prev);
-  push("../pages/profile");
- // href={"../pages/profile"}
+  push("./profile");
+ // href={"./profile"}
  //  console.log("side",side);
 // signOut();
 }
@@ -136,7 +136,7 @@ let words="Early Diagnosis";
     </li>
         <li className='flex justify-center items-center  text-[#33265e] gap-4 hover:bg-[#33265e] hover:text-[#ecd6fb]  rounded-xl p-2 '>
 <CgProfile  onClick={gotoProfile} />
-<Link href={"../pages/profile"} onClick={togelProMenue} className='   font-bold text-sm '>Profile</Link>
+<Link href={"./profile"} onClick={togelProMenue} className='   font-bold text-sm '>Profile</Link>
     </li>
     <li className='flex justify-center items-center  text-[#33265e] gap-4 hover:bg-[#33265e] hover:text-[#ecd6fb]  rounded-xl p-2 '>
 <MdLogout className='   text-[#33265e] gap-4 hover:bg-[#33265e] hover:text-[#ecd6fb] ' onClick={Logout}/>
@@ -154,7 +154,7 @@ let words="Early Diagnosis";
 {/*}
 
      <div className="flex-1 flex justify-end  gap-2  ">
-     <Link href={"../pages/signin"} >
+     <Link href={"./signin"} >
       <button className="px-1 text-xs  backdrop-blur-sm border bg-[#7c64c9]/30 border-[#4d359d]/40 text-[#33265e] mx-auto text-center rounded-full  ">
           <span>Sign in</span>
           <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-[#33265e] to-transparent" />
@@ -162,7 +162,7 @@ let words="Early Diagnosis";
 
 
        </Link>
-       <Link href={"../pages/signup"}>
+       <Link href={"./signup"}>
        <button className="px-1 text-xs mr-1 backdrop-blur-sm border bg-[#7c64c9]/30 border-[#4d359d]/40 text-[#33265e] mx-auto text-center rounded-full  ">
           <span>Sign up</span>
           <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-[#33265e] to-transparent" />
@@ -185,7 +185,7 @@ let words="Early Diagnosis";
     /></Link>
    <div className="fixed top-24 right-0">
 <div className='flex flex-col gap-2'>
- <Link href={"../pages/sponsors"}>
+ <Link href={"./sponsors"}>
         <button className=" px-3  py-20 backdrop-blur-sm border bg-orange-900/60 border-orange-500/20 text-white mx-auto text-center rounded-full relative ">
        
           <div className="absolute inset-y-4   left-px w-6 bg-gradient-to-b mx-auto from-transparent via-orange-400 to-transparent" />
@@ -198,7 +198,7 @@ let words="Early Diagnosis";
 <div className="fixed top-24 left-0">
 <div className='flex flex-col gap-2'>
  
-        <Link href={"../pages/donate"}>
+        <Link href={"./donate"}>
         <button className=" px-3  py-20 backdrop-blur-sm border bg-green-900/60 border-green-500/20 text-white mx-auto text-center rounded-full relative ">
        
           <div className="absolute inset-y-5   left-px w-6 bg-gradient-to-b mx-auto from-transparent via-green-400 to-transparent" />

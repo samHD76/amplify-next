@@ -15,7 +15,7 @@ import { ImagesSlider } from "./pages/ui/images-slider";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useAuthenticator } from '@aws-amplify/ui-react';
+//import { useAuthenticator } from '@aws-amplify/ui-react';
 import SideContextProvider, {useSideContext} from "./components/context/side-context";
 
 const settings = {
@@ -156,13 +156,17 @@ const words2 = [
   const {userName,setUserName}=useSideContext();
 
   const {Signed}=useSideContext();
-
+  //if (Signed) {const { user, signOut } = useAuthenticator();
+ // setUserName(user?.signInDetails?.loginId);
+// }
   useEffect(() => {
    if (!Signed)setUserName("");
    setBackButtonvisible(false);
+  
   }, []);
 
   return (
+
     <SideContextProvider>
     <div className="w-full h-full" >
  {/* <Spotlight className='absolute top-0 left-32 w-full   ' />*/}
@@ -171,7 +175,6 @@ const words2 = [
 
 
 <div className="bg-[#0b0326]  ">
-
 
 <div className=" grid grid-cols-1 md:grid-cols-2 justify-center items-center   ">
 
@@ -239,6 +242,7 @@ const words2 = [
 
 </div>
 </div>
+
 <div className="mt-20 mb-4 flex flex-1 justify-center items-center font-bold md:text-4xl text-[#7028a0] ">
   <p>Select your Concern</p>
 </div>
@@ -275,6 +279,7 @@ const words2 = [
    
     </div>
     </SideContextProvider>
+
   );
 };
 export default page

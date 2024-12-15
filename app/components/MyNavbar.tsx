@@ -73,10 +73,10 @@ console.log("side",side);
 <Link href="/" className='text-[#0b0326] hover:text-gray-400  mr-4 font-semibold text-sm' onClick={closeMenue}>
 Home
 </Link>
-<Link href="../pages/aboutibd" className='  text-[#0b0326] hover:text-gray-400  mr-4 font-semibold text-sm'  onClick={closeMenue}>
+<Link href="../aboutibd" className='  text-[#0b0326] hover:text-gray-400  mr-4 font-semibold text-sm'  onClick={closeMenue}>
 About IBD
 </Link>
-<Link href="../pages/aihelp" className=' text-[#0b0326] hover:text-gray-400 mr-4 font-semibold text-sm'  onClick={closeMenue}>
+<Link href="../aihelp" className=' text-[#0b0326] hover:text-gray-400 mr-4 font-semibold text-sm'  onClick={closeMenue}>
 AI Help
 </Link>
 <div className=' flex  flex-row   justify-between items-center'>
@@ -95,36 +95,36 @@ AI Help
         </li>
     <li className='flex justify-center items-center  text-[#ecd6fb] gap-4 hover:bg-[#ecd6fb] hover:text-[#33265e]  rounded-xl p-2 '>
 <FaUserDoctor className='mr-2  [#ecd6fb]'/>
-<Link href={"../pages/doctors"} onClick={closeMenue} className='  mr-4 font-semibold text-sm'>Doctors</Link>
+<Link href={"../doctors"} onClick={closeMenue} className='  mr-4 font-semibold text-sm'>Doctors</Link>
     </li>
     <li className='flex justify-center items-center gap-4  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e]  rounded-xl p-2'>
 <LuApple className='mr-2  [#ecd6fb]'/>
-<Link href={"../pages/dietitian"} onClick={closeMenue} className='  mr-4 font-semibold text-sm'>⁠Dietitian</Link>
+<Link href={"../dietitian"} onClick={closeMenue} className='  mr-4 font-semibold text-sm'>⁠Dietitian</Link>
     </li>
     <li className='flex justify-center items-center gap-4 text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e]  rounded-xl p-2'>
 <IoNavigateCircleOutline className='mr-2  [#ecd6fb]'/>
-<Link href={"../pages/toiletnavigator"} onClick={closeMenue} className='  mr-4 font-semibold text-sm'>⁠Toilet Navigator</Link>
+<Link href={"../toiletnavigator"} onClick={closeMenue} className='  mr-4 font-semibold text-sm'>⁠Toilet Navigator</Link>
     </li>
     <li className='flex justify-center items-center gap-4  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e]  rounded-xl p-2'>
 <MdOutlineManageAccounts className='mr-2  [#ecd6fb]'/>
-<Link href={"../pages/manageibd"} onClick={closeMenue} className='  mr-4 font-semibold text-sm'>⁠Manage IBD</Link>
+<Link href={"../manageibd"} onClick={closeMenue} className='  mr-4 font-semibold text-sm'>⁠Manage IBD</Link>
     </li>
     <li className='flex justify-center items-center gap-4  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e]  blue-800 rounded-xl p-2'>
 <MdOutlineArticle className='mr-2  [#ecd6fb]'/>
-<Link href={"../pages/articles"} onClick={closeMenue} className='  mr-4 font-semibold text-sm'>⁠Articles</Link>
+<Link href={"../articles"} onClick={closeMenue} className='  mr-4 font-semibold text-sm'>⁠Articles</Link>
     </li>
     <li className='flex justify-center items-center gap-4  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e]  rounded-xl p-2'>
 <GoOrganization className='mr-2  [#ecd6fb]'/>
-<Link href={"../pages/organizations"} onClick={closeMenue} className='  mr-4 font-semibold text-sm'>⁠Organizations</Link>
+<Link href={"../organizations"} onClick={closeMenue} className='  mr-4 font-semibold text-sm'>⁠Organizations</Link>
     </li>
 </ul>
 }
 </div>
 </div>
-<Link href="../pages/aboutus" className='  text-[#0b0326] hover:text-gray-400  mr-4 font-semibold text-sm'  onClick={closeMenue}>
+<Link href="../aboutus" className='  text-[#0b0326] hover:text-gray-400  mr-4 font-semibold text-sm'  onClick={closeMenue}>
 About Us
 </Link>
-<Link href="../pages/contact-us" className='  text-[#0b0326] hover:text-gray-400  mr-4 font-semibold text-sm'  onClick={closeMenue}>
+<Link href="../contact-us" className='  text-[#0b0326] hover:text-gray-400  mr-4 font-semibold text-sm'  onClick={closeMenue}>
 Contact Us
 </Link>
 </div>
