@@ -18,7 +18,10 @@ const client = generateClient<Schema>();
   
  
     
-const page = () => {
+const page = ({children}:{
+  
+  children: React.ReactNode;
+})  => {
     const { user, signOut } = useAuthenticator();
     
     const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
