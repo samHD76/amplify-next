@@ -89,7 +89,7 @@ const MainLayout = ({children}:{
 
 {Signed? 
 <>
-
+<Authenticator.Provider>
 <React.StrictMode>
                                       {/*socialProviders={['amazon', 'apple', 'facebook', 'google']}*/}
 <Authenticator initialState={AuthFunction} hideSignUp={AuthFunction=="signUp"?false:true}  className='pt-44 bg-gradient-to-b  mx-auto from-transparent via-[#33265e] to-transparent'> 
@@ -111,7 +111,7 @@ const MainLayout = ({children}:{
 </div>
 </Authenticator>
 </React.StrictMode>
-
+</Authenticator.Provider>
   
     </>
 :

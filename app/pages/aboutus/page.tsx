@@ -8,6 +8,8 @@ import grouptalk from '../../../public/images/group talk.png'
 import ourAim from '../../../public/images/abour us 3.png'
 import './page.css'
 import { BsJustify } from 'react-icons/bs';
+//import { Authenticator } from '@aws-amplify/ui-react';
+
 //import { TextGenerateEffect } from  "../ui/text-generate-effect"
 const words = `Myccangel about us 1`
 //const {userName,setUserName}=useSideContext();                                                                                                                                                                                                                                                                                                                                                                                                                               ;
@@ -20,6 +22,7 @@ const page = () => {
 
 
   return (
+  
   <main style={styles.body}>
     
     <div style={styles.upper}>
@@ -177,8 +180,12 @@ const page = () => {
       </div>
 
   </main>
+
+
   )
 };
+
+
 const styles = {
   body: {
     backgroundColor: 'white',
