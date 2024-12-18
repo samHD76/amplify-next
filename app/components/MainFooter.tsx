@@ -81,7 +81,7 @@ const MainFooter = () => {
 </Link>
 </div>
 <p>Support us in our journey</p>
-<Link href={"./signin"} className="mt-4 mb-4" >
+<Link href={"/"} className="mt-4 mb-4" >
        <button  className=" text-[#ecd6fb] bg-lime-500 p-1 hover:bg-gray-200 hover:text-[#33265e] min-w-32" >Support now</button>
        </Link>
 <p className="flex font-serif text-[#474545] text-xs mb-2"> assistant@myccangel.org </p>
@@ -99,10 +99,10 @@ const MainFooter = () => {
 <Link href="/" className='text-[#0b0326] hover:text-gray-400   font-thin text-sm' onClick={closeMenue}>
 Home
 </Link>
-<Link href="./aboutibd" className='  text-[#0b0326] hover:text-gray-400   font-thin text-sm'  onClick={closeMenue}>
+<Link href="../pages/aboutibd" className='  text-[#0b0326] hover:text-gray-400   font-thin text-sm'  onClick={closeMenue}>
 About IBD
 </Link>
-<Link href="./aihelp" className=' text-[#0b0326] hover:text-gray-400  font-thin text-sm'  onClick={closeMenue}>
+<Link href="../pages/aihelp" className=' text-[#0b0326] hover:text-gray-400  font-thin text-sm'  onClick={closeMenue}>
 AI Help
 </Link>
 <div className=' flex  flex-row   justify-between items-center'>
@@ -122,36 +122,36 @@ AI Help
         </li>
     <li className='flex justify-center items-center  text-[#ecd6fb] gap-4 hover:bg-[#ecd6fb] hover:text-[#33265e]  rounded-xl p-2 '>
 <FaUserDoctor className='mr-2  [#ecd6fb]'/>
-<Link href={"./doctors"} onClick={closeMenue} className='  mr-4 font-thin text-sm'>Doctors</Link>
+<Link href={"../pages/doctors"} onClick={closeMenue} className='  mr-4 font-thin text-sm'>Doctors</Link>
     </li>
     <li className='flex justify-center items-center gap-4  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e]  rounded-xl p-2'>
 <LuApple className='mr-2  [#ecd6fb]'/>
-<Link href={"./dietitian"} onClick={closeMenue} className='  mr-4 font-thin text-sm'>⁠Dietitian</Link>
+<Link href={"../pages/dietitian"} onClick={closeMenue} className='  mr-4 font-thin text-sm'>⁠Dietitian</Link>
     </li>
     <li className='flex justify-center items-center gap-4 text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e]  rounded-xl p-2'>
 <IoNavigateCircleOutline className='mr-2  [#ecd6fb]'/>
-<Link href={"./toiletnavigator"} onClick={closeMenue} className='  mr-4 font-thin text-sm'>⁠Toilet Navigator</Link>
+<Link href={"../pages/toiletnavigator"} onClick={closeMenue} className='  mr-4 font-thin text-sm'>⁠Toilet Navigator</Link>
     </li>
     <li className='flex justify-center items-center gap-4  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e]  rounded-xl p-2'>
 <MdOutlineManageAccounts className='mr-2  [#ecd6fb]'/>
-<Link href={"./manageibd"} onClick={closeMenue} className='  mr-4 font-thin text-sm'>⁠Manage IBD</Link>
+<Link href={"../pages/manageibd"} onClick={closeMenue} className='  mr-4 font-thin text-sm'>⁠Manage IBD</Link>
     </li>
     <li className='flex justify-center items-center gap-4  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e]  blue-800 rounded-xl p-2'>
 <MdOutlineArticle className='mr-2  [#ecd6fb]'/>
-<Link href={"./articles"} onClick={closeMenue} className='  mr-4 font-thin text-sm'>⁠Articles</Link>
+<Link href={"../pages/articles"} onClick={closeMenue} className='  mr-4 font-thin text-sm'>⁠Articles</Link>
     </li>
     <li className='flex justify-center items-center gap-4  text-[#ecd6fb] hover:bg-[#ecd6fb] hover:text-[#33265e]  rounded-xl p-2'>
 <GoOrganization className='mr-2  [#ecd6fb]'/>
-<Link href={"./organizations"} onClick={closeMenue} className='  mr-4 font-thin text-sm'>⁠Organizations</Link>
+<Link href={"../pages/organizations"} onClick={closeMenue} className='  mr-4 font-thin text-sm'>⁠Organizations</Link>
     </li>
 </ul>
 }
 </div>
 </div>
-<Link href="./aboutus" className='  text-[#0b0326] hover:text-gray-400   font-thin text-sm'  onClick={closeMenue}>
+<Link href="../pages/aboutus" className='  text-[#0b0326] hover:text-gray-400   font-thin text-sm'  onClick={closeMenue}>
 About Us
 </Link>
-<Link href="./contact-us" className='  text-[#0b0326] hover:text-gray-400   font-thin text-sm'  onClick={closeMenue}>
+<Link href="../pages/contact-us" className='  text-[#0b0326] hover:text-gray-400   font-thin text-sm'  onClick={closeMenue}>
 Contact Us
 </Link>
 </div>

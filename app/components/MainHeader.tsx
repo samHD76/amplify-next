@@ -28,6 +28,8 @@ const getText = (index: number) => {
 
 const NUMBER_OF_TEXT = 2;
 const MainHeader = () => {
+     // let   {navDir}=useSideContext();
+  const {componentName,setComponentName}=useSideContext();
   const {userName,setUserName}=useSideContext();
   const {userId,setUserId}=useSideContext();
   const {Signed}=useSideContext();
@@ -52,15 +54,20 @@ const {AuthFunction,setAuthFunction}=useSideContext();
    //  console.log("side",side);
 // signOut();
  }
- const { push } = useRouter();
- const gotoProfile=()=> {
-  // toggle();
-  setProfMenue((prev)=> !prev);
-  push("./profile");
+ //const { push } = useRouter();
+ // function gotoProfile(){
+ 
+ // useSideContext().navDir="Profile";
+
+ // setComponentName("Profile");
+ // setProfMenue((prev)=> !prev);
+ // push("/",
+
+   // );
  // href={"./profile"}
  //  console.log("side",side);
 // signOut();
-}
+//}
  const Logout=()=> {
   // toggle();
   setSigned(false);
@@ -135,8 +142,15 @@ let words="Early Diagnosis";
 {userId}
     </li>
         <li className='flex justify-center items-center  text-[#33265e] gap-4 hover:bg-[#33265e] hover:text-[#ecd6fb]  rounded-xl p-2 '>
-<CgProfile  onClick={gotoProfile} />
-<Link href={"./profile"} onClick={togelProMenue} className='   font-bold text-sm '>Profile</Link>
+<CgProfile   />
+<Link href={
+  {
+    pathname:"/",
+    query:{
+      cN:"Profile"
+    }
+  }
+} onClick={togelProMenue} className='   font-bold text-sm '>Profile</Link>
     </li>
     <li className='flex justify-center items-center  text-[#33265e] gap-4 hover:bg-[#33265e] hover:text-[#ecd6fb]  rounded-xl p-2 '>
 <MdLogout className='   text-[#33265e] gap-4 hover:bg-[#33265e] hover:text-[#ecd6fb] ' onClick={Logout}/>
@@ -185,7 +199,7 @@ let words="Early Diagnosis";
     /></Link>
    <div className="fixed top-24 right-0">
 <div className='flex flex-col gap-2'>
- <Link href={"./sponsors"}>
+ <Link href={"../pages/sponsors"}>
         <button className=" px-3  py-20 backdrop-blur-sm border bg-orange-900/60 border-orange-500/20 text-white mx-auto text-center rounded-full relative ">
        
           <div className="absolute inset-y-4   left-px w-6 bg-gradient-to-b mx-auto from-transparent via-orange-400 to-transparent" />
@@ -198,7 +212,7 @@ let words="Early Diagnosis";
 <div className="fixed top-24 left-0">
 <div className='flex flex-col gap-2'>
  
-        <Link href={"./donate"}>
+        <Link href={"../pages/donate"}>
         <button className=" px-3  py-20 backdrop-blur-sm border bg-green-900/60 border-green-500/20 text-white mx-auto text-center rounded-full relative ">
        
           <div className="absolute inset-y-5   left-px w-6 bg-gradient-to-b mx-auto from-transparent via-green-400 to-transparent" />

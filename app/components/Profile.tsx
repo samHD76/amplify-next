@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { generateClient } from "aws-amplify/data";
 import type { Schema } from "@/amplify/data/resource";
-import "../app.css";
+import "./../app.css";
 import { Amplify } from "aws-amplify";
 import outputs from "@/amplify_outputs.json";
 import "@aws-amplify/ui-react/styles.css";
@@ -18,10 +18,7 @@ const client = generateClient<Schema>();
   
  
     
-const page = ({children}:{
-  
-  children: React.ReactNode;
-})  => {
+export const Profile = () => {
     const { user, signOut } = useAuthenticator();
     
     const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
@@ -50,9 +47,9 @@ const page = ({children}:{
     <main>
       <h1>{user?.username}</h1>
               <h1>{user?.signInDetails?.loginId}</h1>
-      
+      <h1>My account</h1>
            
-      <button onClick={createTodo}>+ new</button>
+      <button onClick={createTodo}>j2523345myacc</button>
       <ul>
       
         {
@@ -63,18 +60,11 @@ const page = ({children}:{
         ))}
       </ul>
       <div>
-        🥳 
-        <br />
         
+       
        
       </div>
     </main>
    
   );
 }
-
-
-
-
-
-export default page

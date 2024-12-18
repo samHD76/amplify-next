@@ -2,7 +2,9 @@
 
 import React, { createContext, useState,useContext } from "react";
 type SideContext ={
-  
+  navDir: any;
+  componentName: any;
+  setComponentName: React.Dispatch<React.SetStateAction<any>>;
   backButtonvisible: boolean;
   setBackButtonvisible: React.Dispatch<React.SetStateAction<boolean>>;
   profMenue: boolean;
@@ -31,9 +33,14 @@ export default function SideContextProvider({children}: {
     const [userName, setUserName]=useState("");
     const [userId, setUserId]=useState("");
     const [backButtonvisible, setBackButtonvisible]=useState(false);
+    const [componentName,setComponentName]=useState("");
+    const navDir="";
     return(
         <SideContext.Provider
         value={{
+            navDir,
+            componentName,
+            setComponentName,
             AuthFunction,
             setAuthFunction,
             backButtonvisible,
