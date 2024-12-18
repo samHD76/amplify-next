@@ -68,7 +68,8 @@ const {AuthFunction,setAuthFunction}=useSideContext();
  //  console.log("side",side);
 // signOut();
 //}
- const Logout=()=> {
+{/*} 
+const Logout=()=> {
   // toggle();
   setSigned(false);
   setProfMenue((prev)=> !prev);
@@ -77,6 +78,7 @@ const {AuthFunction,setAuthFunction}=useSideContext();
  //  console.log("side",side);
  signOut();
 }
+*/}
 const sginingIn=()=>{
 setAuthFunction("signIn");
 setSigned(true)
@@ -153,8 +155,15 @@ let words="Early Diagnosis";
 } onClick={togelProMenue} className='   font-bold text-sm '>Profile</Link>
     </li>
     <li className='flex justify-center items-center  text-[#33265e] gap-4 hover:bg-[#33265e] hover:text-[#ecd6fb]  rounded-xl p-2 '>
-<MdLogout className='   text-[#33265e] gap-4 hover:bg-[#33265e] hover:text-[#ecd6fb] ' onClick={Logout}/>
-<Link href={""} onClick={Logout} className='   font-bold text-sm'>Log out</Link>
+<MdLogout className='   text-[#33265e] gap-4 hover:bg-[#33265e] hover:text-[#ecd6fb] ' />
+<Link href={
+  {
+    pathname:"/",
+    query:{
+      cN:"logout"
+    }
+  }
+}  className='   font-bold text-sm' onClick={togelProMenue}>Log out</Link>
     </li>
   
 </ul>

@@ -22,6 +22,7 @@ export const Profile = () => {
     const { user, signOut } = useAuthenticator();
     
     const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
+    const [Profile, setProfile] = useState<Array<Schema["Profile"]["type"]>>([]);
 
   function listTodos() {
     client.models.Todo.observeQuery().subscribe({
@@ -29,8 +30,15 @@ export const Profile = () => {
     });
   }
 
+  function listProfile() {
+    client.models.Profile.observeQuery().subscribe({
+      next: (data) => setProfile([...data.items]),
+    });
+  }
+
   useEffect(() => {
     listTodos();
+    listProfile();
   }, []);
 
   function createTodo() {

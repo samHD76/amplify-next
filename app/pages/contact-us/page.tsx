@@ -13,9 +13,9 @@ const page = () => {
   <div className="flex-col md:w-[45%] justify-center items-center">
     <div className="text-customPurple text-4xl font-bold flex flex-col mb-6 justify-center items-center">Get in Touch</div>
     <h5 className="mb-8 block text-sm font-medium"><p>We would love to hear from you! Fill out the form or email us at</p>
-       <div className='flex font-bold text-green-900 flex-col'><p>info@myccangel.org</p><p>partners@myccangel.org</p><p>support@myccangel.org</p> <p>Or write direct to us</p>
+       <div className='flex font-bold text-green-900 flex-col'><p>info@myccangel.org</p><p>partners@myccangel.org</p><p>support@myccangel.org</p> 
       </div></h5>
-      <h5 className="mb-6 block text-sm font-medium"><p>Or write direct to us, we will get back to you soon!</p>
+      <h5 className="mb-6 block text-sm font-medium"><p>We will get back to you soon!</p>
       </h5>
   </div>
 
@@ -24,27 +24,27 @@ const page = () => {
 
         <form className=' w-full'>
           <div >
-            <label htmlFor="first_name" className="block text-sm font-medium text-gray-700">First Name*</label>
-            <input className="w-full mt-2 p-3 border bg-lightPurple rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            <label htmlFor="first_name" className="block mt-3 text-sm font-medium text-gray-700">First Name*</label>
+            <input className="w-full  p-3 border bg-lightPurple rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             type="text" 
             id="first_name" 
             name="first_name" required />
           </div>
-          <div className="form-group">
-            <label htmlFor="last_name" className="block text-sm font-medium text-gray-700">Last Name*</label>
-            <input className="w-full mt-2 p-3 border bg-lightPurple rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          <div className="">
+            <label htmlFor="last_name" className="block text-sm  mt-3 font-medium text-gray-700">Last Name*</label>
+            <input className="w-full  p-3 border bg-lightPurple rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             type="text" id="last_name" name="last_name" required />
           </div>
-          <div className="form-group">
-            <label htmlFor="email"className="block text-sm font-medium text-gray-700">Email*</label>
+          <div className="">
+            <label htmlFor="email"className="block text-sm mt-3  font-medium text-gray-700">Email*</label>
             <input 
-            className="w-full mt-2 p-3 border bg-lightPurple rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full  p-3 border bg-lightPurple rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             type ="email" id="email" name="email" required/>
           </div>
             <div className="form-group">
-            <label htmlFor="message"className="block text-sm font-medium text-gray-700">Message*</label>
+            <label htmlFor="message"className="block text-sm mt-3  font-medium text-gray-700">Message*</label>
             <textarea 
-            className="w-full mb-6 mt-2 p-3 border  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full mb-6  p-3 border  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             id="message" name="message" required></textarea>
           </div>
           <div className="flex justify-center">

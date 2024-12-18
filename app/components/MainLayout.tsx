@@ -229,7 +229,7 @@ const MainLayout = ({children}:{
     /></a>
     {AuthFunction=="signUp"&&
     
-    <div className='flex  flex-1 justify-center items-center text-["#33265e"] mr-20 ml-20 mt-5'><p>By Signing up you acknowledge that you have read and accept Myccangel <Link href='' className='text-green-600'>terms of use agreement</Link>  and consent to thae <a href='' className='text-green-600'>privacy policy </a> and video privacy policy.</p></div>}
+    <div className='flex  flex-1 justify-center items-center text-["#33265e"] mr-20 ml-20 mt-5'><p>By Signing up you acknowledge that you have read and accepted Myccangel <Link href='' className='text-green-600'>terms of use agreement</Link>  and consent to the <a href='' className='text-green-600'>privacy policy </a> and video privacy policy.</p></div>}
     </>
 }
     </div>
