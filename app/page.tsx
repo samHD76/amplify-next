@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Home } from "./components/Home";
-import { Profile } from "./components/Profile";
+import { Profilepage } from "./components/Profilepage";
 import {useSideContext} from "./components/context/side-context";
 import { signOut } from "aws-amplify/auth";
 import { useRouter } from 'next/navigation';
@@ -38,7 +38,7 @@ import { useRouter } from 'next/navigation';
    <>
    
    {searchParams.cN=="Profile"?
-    <Profile/>
+    <Profilepage/>
    :
     <Home/>
   }

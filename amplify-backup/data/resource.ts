@@ -12,7 +12,7 @@ const schema = a.schema({
       content: a.string(),
     //  isDone: a.boolean(),
     }),
-    Profile: a
+  Profile: a
     .model({
       name: a.string(),
       tel: a.string(),
