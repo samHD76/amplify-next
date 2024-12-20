@@ -31,16 +31,19 @@ export const Profilepage = () => {
   }
 
   function listProfile() {
+    return new Promise(()=>{
     client.models.Profile.observeQuery().subscribe({
       next: (data) => setProfiles([...data.items]),
     });
+  })
   }
 
   useEffect(() => {
     listTodos();
 
-    listProfile();
+    listProfile().then(()=>{
 if(profiles.length==0) createProfile("","","","","","");
+    })
 //console.log("PLength",profiles.length);  
 //console.log("TodosLength",todos.length);  
 }, []);
