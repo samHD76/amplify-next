@@ -31,11 +31,11 @@ export const Profilepage = async () => {
   }
 
   async function listProfile(){
-     new Promise(() => {
+    await new Promise(() => {
       client.models.Profile.observeQuery().subscribe({
-        next: (data_1) => setProfiles([...data_1.items])
+        next: (data_1) => setProfiles([...data_1.items]),
       });
-    }).then
+    })
     if (profiles.length == 0) createProfile("", "", "", "", "", "");
   }
 
