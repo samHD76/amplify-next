@@ -47,7 +47,12 @@ export const Profilepage = () => {
 
   function createTodo() {
     client.models.Todo.create({
-      content: window.prompt("Todo content"),
+      content: window.prompt("Id content"),
+    });
+  }
+  function createProfile() {
+    client.models.Profile.create({
+      name: window.prompt("Name content"),
     });
   }
   function initProfile() {
@@ -73,6 +78,7 @@ export const Profilepage = () => {
       <h1>My account</h1>
            
       <button onClick={createTodo}>j2523345myacc</button>
+      <button onClick={createProfile}>j2523345myacb</button>
       <ul>
       
       {
@@ -83,30 +89,20 @@ export const Profilepage = () => {
       ))}
     </ul>
     <p>Client</p>
-      <ul>
-      
-       
-         {
-        profiles.map((item) => (
-         <ul>
-          <li 
-          key={item.id}>{item.name}</li>
-          <li 
-          key={item.id}>{item.tel}</li>
-          <li 
-          key={item.id}>{item.address1}</li>
-          <li 
-          key={item.id}>{item.address2}</li>
-           <li 
-          key={item.id}>{item.city}</li>
-           <li 
-          key={item.id}>{item.country}</li>
-          </ul>
-        ))}
-      </ul>
+     
       <div>
       
+      <ul>
+      
+      {
+      profiles.map((profile) => (
+        <li 
        
+        key={profile.id}>{profile.name}</li>
+      ))}
+    </ul>
+    <p>Client</p>
+      <ul></ul> 
        
        
       </div>
