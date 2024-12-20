@@ -84,7 +84,7 @@ if(profiles.length==0) createProfile("","","","","","");
       <h1>My account</h1>
            
       <button onClick={createTodo}>j2523345myacc</button>
-      <button onClick={createProfile("NA","NA","NA","NA","NA","NA")}>j2523345myacb</button>
+      <button onClick={() => createProfile("NA","NA","NA","NA","NA","NA")}>j2523345myacb</button>
       <ul>
       
       {
