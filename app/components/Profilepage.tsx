@@ -102,6 +102,8 @@ export const Profilepage = () => {
       ))}
     </ul>
     <p>Client</p>
+    <p>Secured hand shake</p>
+    <p>{profiles.length}</p>
       <ul></ul> 
        
        
