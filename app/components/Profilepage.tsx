@@ -40,9 +40,9 @@ export const Profilepage = () => {
     listTodos();
 
     listProfile();
-if(profiles.length=0) initProfile();
-console.log("PLength",profiles.length);  
-console.log("TodosLength",todos.length);  
+//if(profiles.length=0) initProfile();
+//console.log("PLength",profiles.length);  
+//console.log("TodosLength",todos.length);  
 }, []);
 
   function createTodo() {
@@ -75,6 +75,16 @@ console.log("TodosLength",todos.length);
       <button onClick={createTodo}>j2523345myacc</button>
       <ul>
       
+      {
+      todos.map((todo) => (
+        <li 
+        onClick={() => deleteTodo(todo.id)}
+        key={todo.id}>{todo.content}</li>
+      ))}
+    </ul>
+    <p>Client</p>
+      <ul>
+      
        
          {
         profiles.map((item) => (
@@ -95,8 +105,8 @@ console.log("TodosLength",todos.length);
         ))}
       </ul>
       <div>
-        <p>Number</p>
-        {todos.length}
+      
+       
        
        
       </div>
