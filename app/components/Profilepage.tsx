@@ -18,7 +18,7 @@ const client = generateClient<Schema>();
   
  
     
-export const Profilepage = () => {
+export const Profilepage = async () => {
     const { user, signOut } = useAuthenticator();
     
     const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
@@ -30,12 +30,12 @@ export const Profilepage = () => {
     });
   }
 
-  async function listProfile(): Promise<any> {
-    await new Promise(() => {
+  async function listProfile(){
+     new Promise(() => {
       client.models.Profile.observeQuery().subscribe({
-        next: (data_1) => setProfiles([...data_1.items]),
+        next: (data_1) => setProfiles([...data_1.items])
       });
-    });
+    }).then
     if (profiles.length == 0) createProfile("", "", "", "", "", "");
   }
 
