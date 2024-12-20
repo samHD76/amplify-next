@@ -30,20 +30,21 @@ export const Profilepage = () => {
     });
   }
 
-  function listProfile() {
+  function listProfile(): Promise<any> {
     return new Promise(()=>{
     client.models.Profile.observeQuery().subscribe({
       next: (data) => setProfiles([...data.items]),
     });
-  })
+  }).then(()=>{
+    if(profiles.length==0) createProfile("","","","","","");
+        })
   }
 
   useEffect(() => {
     listTodos();
 
-    listProfile().then(()=>{
-if(profiles.length==0) createProfile("","","","","","");
-    })
+    listProfile();
+   
 //console.log("PLength",profiles.length);  
 //console.log("TodosLength",todos.length);  
 }, []);
