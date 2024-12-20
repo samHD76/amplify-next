@@ -40,7 +40,7 @@ export const Profilepage = () => {
     listTodos();
 
     listProfile();
-//if(profiles.length=0) initProfile();
+if(profiles.length==0) createProfile("","","","","","");
 //console.log("PLength",profiles.length);  
 //console.log("TodosLength",todos.length);  
 }, []);
@@ -50,9 +50,15 @@ export const Profilepage = () => {
       content: window.prompt("Id content"),
     });
   }
-  function createProfile() {
+  function createProfile(Name:any,Add1:any,Add2:any,Tel:any,City:any,Country:any) {
     client.models.Profile.create({
-      name: window.prompt("Name content"),
+     // name: window.prompt("Name content"),
+     name:Name,
+     address1:Add1,
+     address2:Add2,
+     tel:Tel,
+     city:City,
+     country:Country
     });
   }
   function initProfile() {
@@ -78,7 +84,7 @@ export const Profilepage = () => {
       <h1>My account</h1>
            
       <button onClick={createTodo}>j2523345myacc</button>
-      <button onClick={createProfile}>j2523345myacb</button>
+      <button onClick={createProfile("NA","NA","NA","NA","NA","NA")}>j2523345myacb</button>
       <ul>
       
       {
