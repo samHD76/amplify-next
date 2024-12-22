@@ -125,7 +125,7 @@ export const Profileform = () => {
                <label className='flex mt-1'>Name*</label>
                 <input
                     style={styles.input}
-                    placeholder="Name"
+                    placeholder={name}
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
@@ -135,7 +135,7 @@ export const Profileform = () => {
 
                 <input
                     style={styles.input}
-                    placeholder="Tel"
+                    placeholder={tel}
                     value={tel}
                     onChange={(e) => setTel(e.target.value)}
                 />
@@ -144,7 +144,7 @@ export const Profileform = () => {
                 <label className='flex mt-1'>Address1*</label>
                 <input
                     style={styles.input}
-                    placeholder="add1"
+                    placeholder={add1}
                     value={add1}
                     onChange={(e) => setAdd1(e.target.value)}
                 />
@@ -152,7 +152,7 @@ export const Profileform = () => {
                 <label className='flex mt-1'>Address2</label>
                 <input
                     style={styles.input}
-                    placeholder="add2"
+                    placeholder={add2}
                     value={add2}
                     onChange={(e) => setAdd2(e.target.value)}
                 />
@@ -161,7 +161,7 @@ export const Profileform = () => {
                 <label className='flex mt-1'>City*</label>
                 <input
                     style={styles.input}
-                    placeholder="City"
+                    placeholder={city}
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
                 />
@@ -170,7 +170,7 @@ export const Profileform = () => {
                 <label className='flex mt-1'>Country*</label>
                 <input
                     style={styles.input}
-                    placeholder="Country"
+                    placeholder={country}
                     value={country}
                     onChange={(e) => setCountry(e.target.value)}
                 />
