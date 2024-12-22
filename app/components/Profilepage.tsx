@@ -10,6 +10,7 @@ import "@aws-amplify/ui-react/styles.css";
 import { Authenticator } from '@aws-amplify/ui-react';
 import React from 'react';
 import { useAuthenticator } from '@aws-amplify/ui-react';
+import { Profileform } from "./Profileform";
 Amplify.configure(outputs);
 
 const client = generateClient<Schema>();
@@ -23,7 +24,7 @@ export const Profilepage = () => {
     
     const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
     const [profiles, setProfiles] = useState<Array<Schema["Profile"]["type"]>>([]);
-
+    const[editForm,setEditForm]=useState(false);
   function listTodos() {
     client.models.Todo.observeQuery().subscribe({
       next: (data) => setTodos([...data.items]),
@@ -83,6 +84,7 @@ export const Profilepage = () => {
     <main>
      {/* <h1>{user?.username}</h1>
               <h1>{user?.signInDetails?.loginId}</h1>*/}
+              
       <h1>My account</h1>
            
       <button onClick={createTodo}>j2523345myacc</button>
@@ -96,8 +98,9 @@ export const Profilepage = () => {
         key={todo.id}>{todo.content}</li>
       ))}
     </ul>
-    <p>Client</p>
-     
+    <button onClick={()=>{setEditForm(true)}}>Edit- 2320001</button>
+
+    {editForm&&<Profileform/>}
       <div>
       
       <ul>

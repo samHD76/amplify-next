@@ -24,7 +24,9 @@ const page = () => {
   return (
   
   <main style={styles.body}>
-    
+   <div className='absolute w-full h-full'>
+   
+   </div>
     <div style={styles.upper}>
     <div className=" grid grid-cols-1 md:grid-cols-2 justify-center items-center   ">
 
