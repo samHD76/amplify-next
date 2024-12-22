@@ -2,16 +2,24 @@
 
 import { Alert } from '@material-tailwind/react';
 import { Background, StartValueType } from '@tsparticles/engine';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { generateClient } from "aws-amplify/data";
 import type { Schema } from "@/amplify/data/resource";
-
+import "./../app.css";
+import { Amplify } from "aws-amplify";
+import outputs from "@/amplify_outputs.json";
+import "@aws-amplify/ui-react/styles.css";
+import { Authenticator } from '@aws-amplify/ui-react';
+import { useAuthenticator } from '@aws-amplify/ui-react';
+Amplify.configure(outputs);
 const client = generateClient<Schema>();
 
 export const Profileform = () => {
     const [profiles, setProfiles] = useState<Array<Schema["Profile"]["type"]>>([]);
 
     const [name, setName] = useState('');
+   // const [name, setName] = useState <string | undefined>("");
+
     const [city, setCity] = useState('');
     const [add1, setAdd1] = useState('');
     const [add2, setAdd2] = useState('');
@@ -20,22 +28,28 @@ export const Profileform = () => {
     const [errors, setErrors] = useState<any>({});
     const [isFormValid, setIsFormValid] = useState(true);
     const [start,setStart]=useState(true)
-/*
+
     async function listProfile(){
         client.models.Profile.observeQuery().subscribe({
-          next: (data_1) => {setProfiles([...data_1.items]),
+          next: (data_1) => {if(data_1.items.length == 0)  {
+            setProfiles([...data_1.items]),
             profiles.map((profile) => (
-         // setName(profile.name())       
-               
-              ))}
+        profile.name?  setName(profile.name):null,      
+        profile.city?  setCity(profile.city):null,
+        profile.address1?  setAdd1(profile.address1):null,
+        profile.address2?  setAdd2(profile.address2):null,
+        profile.country?  setCountry(profile.country):null,
+        profile.tel?  setTel(profile.tel):null
+            )
+            )}
          
-          })
+          }})
         }
      
       useEffect(() => {
         listProfile();},[]
     );
- */
+ 
 
     useEffect(() => {
         
