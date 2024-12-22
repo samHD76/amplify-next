@@ -39,6 +39,8 @@ export const Profileform = () => {
             profiles[0].address2?  setAdd2(profiles[0].address2):null,
             profiles[0].country?  setCountry(profiles[0].country):null,
             profiles[0].tel?  setTel(profiles[0].tel):null
+            console.log("Nam1:"),
+            console.log(name)
       /*
             profiles.map((profile) => (
         profile.name?  setName(profile.name):null,      
