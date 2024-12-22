@@ -33,6 +33,13 @@ export const Profileform = () => {
         client.models.Profile.observeQuery().subscribe({
           next: (data_1) => {if(data_1.items.length == 0)  {
             setProfiles([...data_1.items]),
+            profiles[0].name?   setName(profiles[0].name):null,
+            profiles[0].city?  setCity(profiles[0].city):null,
+            profiles[0].address1?  setAdd1(profiles[0].address1):null,
+            profiles[0].address2?  setAdd2(profiles[0].address2):null,
+            profiles[0].country?  setCountry(profiles[0].country):null,
+            profiles[0].tel?  setTel(profiles[0].tel):null
+      /*
             profiles.map((profile) => (
         profile.name?  setName(profile.name):null,      
         profile.city?  setCity(profile.city):null,
@@ -41,7 +48,9 @@ export const Profileform = () => {
         profile.country?  setCountry(profile.country):null,
         profile.tel?  setTel(profile.tel):null
             )
-            )}
+            )
+        */
+        }
          
           }})
         }
