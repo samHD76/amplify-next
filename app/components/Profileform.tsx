@@ -56,10 +56,8 @@ export const Profileform = () => {
          
           }})
         }
+        listProfile();
      
-      useEffect(() => {
-        listProfile();},[]
-    );
  
 
     useEffect(() => {
