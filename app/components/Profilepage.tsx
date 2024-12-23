@@ -12,6 +12,9 @@ import React from 'react';
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import { Profileform } from "./Profileform";
 import { useSideContext } from "./context/side-context";
+import { VscEdit } from "react-icons/vsc";
+
+
 Amplify.configure(outputs);
 
 const client = generateClient<Schema>();
@@ -81,16 +84,26 @@ export const Profilepage = () => {
   function deleteTodo(id: string) {
     client.models.Todo.delete({ id })
   }
+   /////////////////////////////////////////
+   const showEditForm=()=> {
+    setprofileEiditForm(true);
+    // toggle();
+    // setsubMenu(false);
+    
+ }
+ /////////////////////////////////
   return (
    
     <main>
      {/* <h1>{user?.username}</h1>
               <h1>{user?.signInDetails?.loginId}</h1>*/}
-              
+      {/*}        
       <h1>My account</h1>
            
       <button onClick={createTodo}>j2523345myacc</button>
       <button onClick={() => createProfile("NA","NA","NA","NA","NA","NA")}>j2523345myacb</button>
+      
+      
       <ul>
       
       {
@@ -101,24 +114,30 @@ export const Profilepage = () => {
       ))}
     </ul>
     <button onClick={()=>{setprofileEiditForm(true)}}>Edit- 2320001</button>
+*/}
 
     {profileEiditForm&&<Profileform/>}
-      <div>
+      <div >
       
-      <ul>
+     
       
       {
       profiles.map((profile) => (
-        <li 
-       
-        key={profile.id}>{profile.name}</li>
+       <div className="flex justify-center items-center w-full">
+        <VscEdit className='mr-2  [#ecd6fb] cursor-pointer hover:bg-[#ecd6fb] hover:text-black   ' onClick={showEditForm}/>
+        
+       <ul>
+        <li key={profile.id}>Name: {profile.name}</li>
+        <li key={profile.id}>Tel: {profile.tel}</li>
+        <li key={profile.id}>Addrerss1: {profile.address1}</li>
+        <li key={profile.id}>Address2: {profile.address2}</li>
+        <li key={profile.id}>City: {profile.city}</li>
+        <li key={profile.id}>Country: {profile.country}</li>
+        </ul>
+        </div>
       ))}
-    </ul>
-    <p>Client</p>
-    <p>Secured hand shake</p>
-    <p>{profiles.length}</p>
-      <ul></ul> 
-       
+   
+  
        
       </div>
     </main>

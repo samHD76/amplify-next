@@ -218,6 +218,12 @@ export const Profileform = () => {
                 >
                     Save
                 </button>
+                <button
+                    style={{ ...styles.button, opacity: isFormValid ? 1 : 0.5,  }}
+                    onClick={()=>{setprofileEiditForm(false)}}
+                >
+                    Cancel
+                </button>
                 </div>
             </div>
         </div>
@@ -273,6 +279,7 @@ const styles = {
         cursor: 'pointer',
         width: '40%',
         transition: 'opacity 0.2s ease',
+        margin:'10px'
         
     },
     error: {
