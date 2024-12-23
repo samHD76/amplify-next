@@ -32,15 +32,14 @@ export const Profileform = () => {
         client.models.Profile.observeQuery().subscribe({
           next: (data_1) => {if(data_1.items.length != 0)  {
             setProfiles([...data_1.items]),
+            data_1.items[0].id?setId(data_1.items[0].id):null
             data_1.items[0].name?setName(data_1.items[0].name):null
-           /*
-            profiles[0].name?   setName(profiles[0].name):null,
-            profiles[0].city?  setCity(profiles[0].city):null,
-            profiles[0].address1?  setAdd1(profiles[0].address1):null,
-            profiles[0].address2?  setAdd2(profiles[0].address2):null,
-            profiles[0].country?  setCountry(profiles[0].country):null,
-            profiles[0].tel?  setTel(profiles[0].tel):null
-           */
+            data_1.items[0].city?  setCity(data_1.items[0].city):null,
+            data_1.items[0].address1?  setAdd1(data_1.items[0].address1):null,
+            data_1.items[0].address2?  setAdd2(data_1.items[0].address2):null,
+            data_1.items[0].country?  setCountry(data_1.items[0].country):null,
+            data_1.items[0].tel?  setTel(data_1.items[0].tel):null
+           
             console.log("data_1:"),
            // console.log(name),
             console.log(data_1),
@@ -118,10 +117,10 @@ export const Profileform = () => {
       }
 
       ////////////////////////
-      function updateProfile(Name:any,Add1:any,Add2:any,Tel:any,City:any,Country:any) {
+      function updateProfile(Id:any,Name:any,Add1:any,Add2:any,Tel:any,City:any,Country:any) {
         client.models.Profile.update ({
          // name: window.prompt("Name content"),
-         id:"rererere",
+         id:Id,
          name:Name,
          address1:Add1,
          address2:Add2,
@@ -145,7 +144,7 @@ export const Profileform = () => {
         else {
            // console.log('Form has errors. Please correct them.');
            alert("Success");
-            createProfile(name,add1,add2,tel,city,country);
+            updateProfile(id,name,add1,add2,tel,city,country);
 
         }
        
