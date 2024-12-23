@@ -2,6 +2,8 @@
 
 import React, { createContext, useState,useContext } from "react";
 type SideContext ={
+  profileEiditForm:boolean;
+  setprofileEiditForm: React.Dispatch<React.SetStateAction<boolean>>;
   navDir: any;
   componentName: any;
   setComponentName: React.Dispatch<React.SetStateAction<any>>;
@@ -26,6 +28,8 @@ export const SideContext= createContext<SideContext| null>(null);
 export default function SideContextProvider({children}: {
     children: React.ReactNode;
   }){
+    
+    const [profileEiditForm, setprofileEiditForm]=useState(false);
     const [side, setSide]=useState(false);
     const [Signed, setSigned]=useState(false);
     const [AuthFunction, setAuthFunction]=useState(false);
@@ -38,6 +42,8 @@ export default function SideContextProvider({children}: {
     return(
         <SideContext.Provider
         value={{
+            profileEiditForm,
+            setprofileEiditForm,
             navDir,
             componentName,
             setComponentName,

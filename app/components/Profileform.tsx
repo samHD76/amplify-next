@@ -11,10 +11,13 @@ import outputs from "@/amplify_outputs.json";
 import "@aws-amplify/ui-react/styles.css";
 import { Authenticator } from '@aws-amplify/ui-react';
 import { useAuthenticator } from '@aws-amplify/ui-react';
+import { useSideContext } from './context/side-context';
 Amplify.configure(outputs);
 const client = generateClient<Schema>();
 
 export const Profileform = () => {
+          const {profileEiditForm,setprofileEiditForm}=useSideContext();
+    
     const [profiles, setProfiles] = useState<Array<Schema["Profile"]["type"]>>([]);
   
     const [id, setId] = useState('');
@@ -143,9 +146,9 @@ export const Profileform = () => {
         } 
         else {
            // console.log('Form has errors. Please correct them.');
-           alert("Success");
+          // alert("Success");
             updateProfile(id,name,add1,add2,tel,city,country);
-
+            setprofileEiditForm(false);
         }
        
     };
@@ -213,7 +216,7 @@ export const Profileform = () => {
                     disabled={!isFormValid && !start}
                     onClick={handleSubmit}
                 >
-                    Submit
+                    Save
                 </button>
                 </div>
             </div>

@@ -11,6 +11,7 @@ import { Authenticator } from '@aws-amplify/ui-react';
 import React from 'react';
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import { Profileform } from "./Profileform";
+import { useSideContext } from "./context/side-context";
 Amplify.configure(outputs);
 
 const client = generateClient<Schema>();
@@ -21,6 +22,7 @@ const client = generateClient<Schema>();
     
 export const Profilepage = () => {
     const { user, signOut } = useAuthenticator();
+      const {profileEiditForm,setprofileEiditForm}=useSideContext();
     
     const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
     const [profiles, setProfiles] = useState<Array<Schema["Profile"]["type"]>>([]);
@@ -98,9 +100,9 @@ export const Profilepage = () => {
         key={todo.id}>{todo.content}</li>
       ))}
     </ul>
-    <button onClick={()=>{setEditForm(true)}}>Edit- 2320001</button>
+    <button onClick={()=>{setprofileEiditForm(true)}}>Edit- 2320001</button>
 
-    {editForm&&<Profileform/>}
+    {profileEiditForm&&<Profileform/>}
       <div>
       
       <ul>
