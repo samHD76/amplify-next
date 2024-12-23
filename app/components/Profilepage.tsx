@@ -123,8 +123,8 @@ export const Profilepage = () => {
       
       {
       profiles.map((profile) => (
-       <div className="flex justify-center items-center w-full">
-        <VscEdit className='mr-2  [#ecd6fb] cursor-pointer hover:bg-[#ecd6fb] hover:text-black   ' onClick={showEditForm}/>
+       <div className="flex justify-center items-center w-full flex-col">
+        <VscEdit className='mr-2  [#ecd6fb] cursor-pointer  hover:text-gray-800  ' onClick={showEditForm}/>
         
        <ul>
         <li key={profile.id}>Name: {profile.name}</li>
