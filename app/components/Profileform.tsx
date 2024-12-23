@@ -33,14 +33,20 @@ export const Profileform = () => {
         client.models.Profile.observeQuery().subscribe({
           next: (data_1) => {if(data_1.items.length != 0)  {
             setProfiles([...data_1.items]),
+           /*
             profiles[0].name?   setName(profiles[0].name):null,
             profiles[0].city?  setCity(profiles[0].city):null,
             profiles[0].address1?  setAdd1(profiles[0].address1):null,
             profiles[0].address2?  setAdd2(profiles[0].address2):null,
             profiles[0].country?  setCountry(profiles[0].country):null,
             profiles[0].tel?  setTel(profiles[0].tel):null
-            console.log("Nam1:"),
-            console.log(name)
+           */
+            console.log("data_1:"),
+           // console.log(name),
+            console.log(data_1),
+            console.log("profiles:"),
+            // console.log(name),
+             console.log(profiles)
       /*
             profiles.map((profile) => (
         profile.name?  setName(profile.name):null,      
@@ -111,6 +117,20 @@ export const Profileform = () => {
         });
       }
 
+      ////////////////////////
+      function updateProfile(Name:any,Add1:any,Add2:any,Tel:any,City:any,Country:any) {
+        client.models.Profile.create({
+         // name: window.prompt("Name content"),
+         name:Name,
+         address1:Add1,
+         address2:Add2,
+         tel:Tel,
+         city:City,
+         country:Country
+        });
+      }
+
+      ///////////////////////
     // Submit
     const handleSubmit = () => {
         setStart(false);
