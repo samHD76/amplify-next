@@ -16,10 +16,10 @@ const client = generateClient<Schema>();
 
 export const Profileform = () => {
     const [profiles, setProfiles] = useState<Array<Schema["Profile"]["type"]>>([]);
-
+  
+    const [id, setId] = useState('');
     const [name, setName] = useState('');
    // const [name, setName] = useState <string | undefined>("");
-
     const [city, setCity] = useState('');
     const [add1, setAdd1] = useState('');
     const [add2, setAdd2] = useState('');
@@ -28,11 +28,11 @@ export const Profileform = () => {
     const [errors, setErrors] = useState<any>({});
     const [isFormValid, setIsFormValid] = useState(true);
     const [start,setStart]=useState(true)
-
     async function listProfile(){
         client.models.Profile.observeQuery().subscribe({
           next: (data_1) => {if(data_1.items.length != 0)  {
             setProfiles([...data_1.items]),
+            data_1.items[0].name?setName(data_1.items[0].name):null
            /*
             profiles[0].name?   setName(profiles[0].name):null,
             profiles[0].city?  setCity(profiles[0].city):null,
@@ -44,9 +44,9 @@ export const Profileform = () => {
             console.log("data_1:"),
            // console.log(name),
             console.log(data_1),
-            console.log("profiles:"),
+            console.log("item"),
             // console.log(name),
-             console.log(profiles)
+             console.log(data_1.items[0].name)
       /*
             profiles.map((profile) => (
         profile.name?  setName(profile.name):null,      
@@ -119,8 +119,9 @@ export const Profileform = () => {
 
       ////////////////////////
       function updateProfile(Name:any,Add1:any,Add2:any,Tel:any,City:any,Country:any) {
-        client.models.Profile.create({
+        client.models.Profile.update ({
          // name: window.prompt("Name content"),
+         id:"rererere",
          name:Name,
          address1:Add1,
          address2:Add2,
