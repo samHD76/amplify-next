@@ -13,6 +13,7 @@ import { useAuthenticator } from '@aws-amplify/ui-react';
 import { Profileform } from "./Profileform";
 import { useSideContext } from "./context/side-context";
 import { VscEdit } from "react-icons/vsc";
+import UploadImage from "./UploadImage";
 
 
 Amplify.configure(outputs);
@@ -115,12 +116,14 @@ export const Profilepage = () => {
     </ul>
     <button onClick={()=>{setprofileEiditForm(true)}}>Edit- 2320001</button>
 */}
-
-    {profileEiditForm&&<Profileform/>}
+<div className={`md:hidden   bg-opacity-80 bg-[#33265e]  rounded-lg overflow-hidden transition-all duration-1000 ${profileEiditForm? "h-600 p-4":"h-0"} `}>
+{profileEiditForm&&<Profileform/>}
+</div>
       <div >
       
      
-      
+      <VscEdit className='mr-2  [#ecd6fb] cursor-pointer  hover:text-gray-800  ' onClick={showEditForm}/>
+
       {
       profiles.map((profile) => (
        <div className="flex justify-center items-center w-full flex-col">
@@ -140,6 +143,7 @@ export const Profilepage = () => {
   
        
       </div>
+      <UploadImage/>
     </main>
    
   );

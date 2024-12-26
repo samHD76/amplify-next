@@ -36,7 +36,7 @@ import { useRouter } from 'next/navigation';
   return (
 
    <>
-   
+  
    {searchParams.cN=="Profile"?
     <Profilepage/>
    :
