@@ -7,5 +7,19 @@ import { defineAuth } from "@aws-amplify/backend";
 export const auth = defineAuth({
   loginWith: {
     email: true,
+    socialProviders: {
+      google: {
+        clientId: "YOUR_GOOGLE_CLIENT_ID",
+        clientSecret: "YOUR_GOOGLE_CLIENT_SECRET",
+      },
+      facebook: {
+        appId: "YOUR_FACEBOOK_APP_ID",
+        appSecret: "YOUR_FACEBOOK_APP_SECRET",
+      },
+      microsoft: {
+        clientId: "YOUR_MICROSOFT_CLIENT_ID",
+        clientSecret: "YOUR_MICROSOFT_CLIENT_SECRET",
+      },
+    },
   },
 });
