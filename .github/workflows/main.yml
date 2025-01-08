@@ -5,4 +5,4 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run:  'curl --header "X-MyHeader: ${{ secrets.TEST }}" https://postman-echo.com/get'
+      - run:  'curl --header "X-MyHeader: ${{ secrets.TEST }}" https://ronia.free.beeceptor.com'
