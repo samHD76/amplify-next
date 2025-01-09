@@ -13,6 +13,7 @@ jobs:
       - name: Clone Repository with Mirror Flag
         run: |
           git clone --mirror https://github.com/${{ github.repository }}.git
+          ls
           cd ${{ github.repository }}
           git remote add upstream https://github.com/samHD76/zitelbot-target.git 
 
