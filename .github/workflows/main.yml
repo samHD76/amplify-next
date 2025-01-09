@@ -1,8 +1,22 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on:
+  push:
+    branches:
+      - '*'  # Mirror all branches
+
 jobs:
-  Explore-GitHub-Actions:
+  mirror:
     runs-on: ubuntu-latest
     steps:
-      - run:  'curl --header "X-MyHeader: ${{ secrets.TEST }}" https://echo.free.beeceptor.com'
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Clone Repository with Mirror Flag
+        run: |
+          # git clone --mirror https://github.com/${{ github.repository }}.git
+          echo ${{github.repository}}  
+          # cd ${{ github.repository }}
+          # git remote add upstream https://github.com/your-username/your-mirror-repo.git 
+
+      # - name: Push to Upstream Repository
+        # run: |
+          # git push --mirror upstream
