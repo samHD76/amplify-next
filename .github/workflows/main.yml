@@ -12,11 +12,10 @@ jobs:
 
       - name: Clone Repository with Mirror Flag
         run: |
-          # git clone --mirror https://github.com/${{ github.repository }}.git
-          echo ${{github.repository}}  
-          # cd ${{ github.repository }}
-          # git remote add upstream https://github.com/your-username/your-mirror-repo.git 
+          git clone --mirror https://github.com/${{ github.repository }}.git
+          cd ${{ github.repository }}
+          git remote add upstream https://github.com/samHD76/zitelbot-target.git 
 
-      # - name: Push to Upstream Repository
-        # run: |
-          # git push --mirror upstream
+      - name: Push to Upstream Repository
+        run: |
+          git push --mirror upstream
