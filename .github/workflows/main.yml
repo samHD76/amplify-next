@@ -17,6 +17,6 @@ jobs:
           cd ${{github.event.repository.name}}.git
           echo "*********************************in the directory"
           git remote add upstream https://samHD76:${{ secrets.PAT}}@github.com/samHD76/zitelbot-target.git 
-          git remote
+          git remote -v
           echo "************************* upsteam repo added"
           git push --mirror upstream
