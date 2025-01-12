@@ -13,7 +13,7 @@ jobs:
       - name: Clone Repository with Mirror Flag
         run: |
           echo "************************cloning!"
-          git clone --mirror https://${{ secrets.TEST }}@github.com/samHD76/ZitelBot.git
+          git clone --mirror https://samHD76:${{ secrets.TEST }}@github.com/samHD76/ZitelBot.git
           echo "************************cloned!"
           cd samHD76/ZitelBot.git.git
           echo "*********************************in the directory"
