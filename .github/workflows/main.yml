@@ -16,7 +16,7 @@ jobs:
           ls
           cd ${{github.event.repository.name}}.git
           ls
-          git remote add upstream https://github.com/samHD76/zitelbot-target.git 
+          git remote add upstream https://samHD76:${{ secrets.PAT}}@github.com/samHD76/zitelbot-target.git 
 
       - name: Push to Upstream Repository
         run: |
