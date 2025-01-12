@@ -18,8 +18,8 @@ jobs:
           ls
           cd ZitelBot.git
           echo "*********************************in the directory"
-          # git remote add upstream https://${{ secrets.TEST }}@github.com/samHD76/zitelbot-target.git
-          git remote set-url origin https://github.com/samHD76/zitelbot-target.git
+          git remote add upstream https://${{ secrets.TEST }}@github.com/samHD76/zitelbot-target.git
+          # git remote set-url origin https://github.com/samHD76/zitelbot-target.git
           git remote -v
           echo "************************* upsteam repo added"
-          git push --mirror origin
+          git push --mirror upstream
