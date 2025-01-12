@@ -12,9 +12,9 @@ jobs:
 
       - name: Clone Repository with Mirror Flag
         run: |
-          git clone --mirror https://github.com/${{ github.repository }}.git
+          git clone --mirror https://samHD76:${{ secrets.PAT }}@github.com/samHD76/ZitelBot.git
           echo "************************cloned!"
-          cd ${{github.event.repository.name}}.git
+          cd samHD76/ZitelBot.git.git
           echo "*********************************in the directory"
           # git remote add upstream https://samHD76:${{ secrets.PAT }}@github.com/samHD76/zitelbot-target.git
           git remote set-url origin https://samHD76:${{ secrets.PAT }}@github.com/samHD76/zitelbot-target.git
