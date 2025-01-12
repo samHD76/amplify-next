@@ -15,6 +15,7 @@ jobs:
           echo "************************cloning!"
           git clone --mirror https://${{ secrets.TEST }}@github.com/samHD76/ZitelBot.git
           echo "************************cloned!"
+          ls
           cd samHD76/ZitelBot.git
           echo "*********************************in the directory"
           # git remote add upstream https://${{ secrets.PAT }}@github.com/samHD76/zitelbot-target.git
